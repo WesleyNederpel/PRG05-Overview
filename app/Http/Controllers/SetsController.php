@@ -21,7 +21,7 @@ class SetsController extends Controller
      */
     public function create() //http://localhost:8000/legosets/create
     {
-        //
+        return view('sets.create');
     }
 
     /**

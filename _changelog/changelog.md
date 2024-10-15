@@ -16,6 +16,9 @@ Vandaag heb ik de layout gemaakt en een aantal pagina's aangemaakt:
 - About Us pagina
 - LEGOsets pagina
 
+Naam en Image wordt getoond op de pagina's LEGOsets (index en show).
+Ook heb ik een create pagina aangemaakt zodat een ingelogde gebruiker LEGO sets zou kunnen toevoegen.
+
 ## 14/10/'24
 
 Vandaag heb ik de ERD gemaakt: ![ERD](/img/erdold.png)
