@@ -1,3 +1,3 @@
-<x-layout>
-
-</x-layout>
+<x-main pagename="Home">
+<h1>Home</h1>
+</x-main>

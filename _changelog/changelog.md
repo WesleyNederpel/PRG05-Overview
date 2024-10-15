@@ -11,6 +11,11 @@ Vandaag heb ik een migratie aangemaakt waarmee ik een tabel in de database heb t
 - created_at (timestamp)
 - updated_at (timestamp)
 
+Vandaag heb ik de layout gemaakt en een aantal pagina's aangemaakt:
+- Homepagina
+- About Us pagina
+- LEGOsets pagina
+
 ## 14/10/'24
 
 Vandaag heb ik de ERD gemaakt: ![ERD](/img/erdold.png)

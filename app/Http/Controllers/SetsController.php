@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Legoset;
 use Illuminate\Http\Request;
 
-class LegosetController extends Controller
+class SetsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class LegosetController extends Controller
     public function index()  //http://localhost:8000/legosets
     {
         $sets = Legoset::all();
-        return view('legosets.index', compact('sets'));
+        return view('sets.index', compact('sets'));
     }
 
     /**
@@ -39,7 +39,7 @@ class LegosetController extends Controller
     {
         $sets = Legoset::find($id);
 
-        return view('legosets.show', compact('sets'));
+        return view('sets.show', compact('sets'));
     }
 
     /**
