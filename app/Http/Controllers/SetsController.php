@@ -37,8 +37,7 @@ class SetsController extends Controller
      */
     public function show($id) //http://localhost:8000/legosets/1
     {
-        $sets = Legoset::find($id);
-
+        $sets = legoset::find($id);
         return view('sets.show', compact('sets'));
     }
 
