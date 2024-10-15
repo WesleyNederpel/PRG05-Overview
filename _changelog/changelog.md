@@ -1,14 +1,27 @@
 # Changelog
 
-Ik heb een **tekstbestand** aangemaakt waarin ik de wijzigingen in mijn project bijhoud. Dit bestand is te vinden in de
-map '_changelog' en heet 'changelog.md'. In dit bestand houd ik bij welke wijzigingen ik heb aangebracht in mijn
-project. Dit is handig voor mijzelf, maar ook voor anderen die met mijn project werken. Zo kunnen zij zien welke
-wijzigingen ik heb aangebracht en waarom ik dat heb gedaan.
+## 15/10/'24
 
-[naam van de link](www.google.com)
+Vandaag heb ik een migratie aangemaakt waarmee ik een tabel in de database heb toegevoegd genaamd legosets. Deze tabel bevat de volgende kolommen:
+- id (primary key)
+- user_id (foreign key)
+- name (varchar)
+- img_url (varchar)
+- activity (integer)
+- created_at (timestamp)
+- updated_at (timestamp)
 
-![alt tekst](./img.webp)
+## 14/10/'24
+
+Vandaag heb ik de ERD gemaakt: ![ERD](/img/erdold.png)
+Gekregen feedback:
+- Set active of inactive d.m.v. tinyint
+- Role gebruiken bij users d.m.v. tinyint i.p.v. tinytext
+
+Aangepaste ERD o.b.v. feedback: ![ERD](/img/erdnew.png)
 
 ## 09/10/'24
 
 Vandaag heb ik het project aangemaakt. Hierbij heb ik het project op github geüpload en breeze geïnstalleerd.
+
+
