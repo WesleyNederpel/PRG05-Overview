@@ -19,7 +19,7 @@ class SetsController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create() //http://localhost:8000/legosets/create
+    public function create() //http://localhost:8000/legosets/create  <- IS GET
     {
         return view('sets.create');
     }
@@ -27,9 +27,16 @@ class SetsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request) //http://localhost:8000/legosets
+    public function store(Request $request) //http://localhost:8000/legosets <- IS POST
     {
-        //
+        $set = new Legoset();
+        $set->name = $request->input('name');
+        $set->img_url = $request->input('img_url');
+        $set->user_id = auth()->user()->id;
+        $set->activity = 1;
+
+        $set->save();
+        return redirect()->route('sets.index');
     }
 
     /**

@@ -21,7 +21,7 @@ Ook heb ik een create pagina aangemaakt zodat een ingelogde gebruiker LEGO sets 
 
 ## 14/10/'24
 
-Vandaag heb ik de ERD gemaakt: ![ERD](/img/erdold.png)
+Vandaag heb ik de ERD gemaakt: ![ERD](/img/erd.png)
 Gekregen feedback:
 - Set active of inactive d.m.v. tinyint
 - Role gebruiken bij users d.m.v. tinyint i.p.v. tinytext
