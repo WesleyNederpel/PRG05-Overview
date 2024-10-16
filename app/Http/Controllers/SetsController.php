@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Legoset;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
 class SetsController extends Controller
@@ -21,7 +22,8 @@ class SetsController extends Controller
      */
     public function create() //http://localhost:8000/legosets/create  <- IS GET
     {
-        return view('sets.create');
+        $brands = Brand::all();
+        return view('sets.create', compact('brands'));
     }
 
     /**
@@ -33,6 +35,7 @@ class SetsController extends Controller
         $set->name = $request->input('name');
         $set->img_url = $request->input('img_url');
         $set->user_id = auth()->user()->id;
+        $set->brand_id = $request->input('brand_id');
         $set->activity = 1;
 
         $set->save();
@@ -67,8 +70,10 @@ class SetsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Legoset $legoset) //http://localhost:8000/legosets/1
+    public function destroy($id) //http://localhost:8000/legosets/1
     {
-        //
+        $sets = Legoset::find($id);
+        $sets->delete();
+        return redirect()->route('sets.index');
     }
 }

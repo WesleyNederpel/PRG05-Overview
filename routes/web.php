@@ -6,11 +6,11 @@ use App\Http\Controllers\SetsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/about', [AboutController::class, 'about']);
+Route::get('/about', [AboutController::class, 'about'])->name('about');
 
-Route::resource('sets', SetsController::class);
+Route::resource('sets', SetsController::class)->name('index', 'sets');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
