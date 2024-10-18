@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Legoset;
 use App\Models\Brand;
+use Auth;
 use Illuminate\Http\Request;
 
 class SetsController extends Controller
@@ -39,7 +40,7 @@ class SetsController extends Controller
         $set->activity = 1;
 
         $set->save();
-        return redirect()->route('sets.index');
+        return redirect()->route('sets');
     }
 
     /**
@@ -74,6 +75,13 @@ class SetsController extends Controller
     {
         $sets = Legoset::find($id);
         $sets->delete();
-        return redirect()->route('sets.index');
+        return redirect()->route('sets');
+    }
+
+    public function uploaded()
+    {
+        $user = Auth::user();
+        $sets = $user->legosets;
+        return view('sets.uploaded', ['sets' => $sets]);
     }
 }

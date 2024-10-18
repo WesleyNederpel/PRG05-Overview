@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function legosets()
+    {
+        return $this->hasMany(legoset::class);
+    }
 }

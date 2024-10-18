@@ -12,6 +12,8 @@ Route::get('/about', [AboutController::class, 'about'])->name('about');
 
 Route::resource('sets', SetsController::class)->name('index', 'sets');
 
+Route::get('/uploaded', [SetsController::class, 'uploaded'])->name('uploaded')->middleware('auth');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

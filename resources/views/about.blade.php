@@ -1,3 +1,3 @@
-<x-app-layout>
-    <h1>Over Ons</h1>
+<x-app-layout pagename="About Us">
+    <h1>About Us</h1>
 </x-app-layout>

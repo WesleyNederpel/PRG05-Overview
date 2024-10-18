@@ -49,6 +49,9 @@
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
+                            <x-dropdown-link :href="route('uploaded')">
+                                {{ __('Uploaded sets') }}
+                            </x-dropdown-link>
 
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
@@ -67,6 +70,9 @@
             @guest
                 <x-nav-link :href="route('login')">
                     Log In
+                </x-nav-link>
+                <x-nav-link :href="route('register')">
+                    Register
                 </x-nav-link>
             @endguest
 

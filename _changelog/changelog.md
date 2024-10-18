@@ -1,10 +1,17 @@
 # Changelog
 
+## 18/10/'24
+
+Vandaag heb ik een Uploaded by Me pagina toegevoegd aan de site. Op deze pagina kan een ingelogde gebruiker bekijken
+welke LEGO sets zij hebben toegevoegd aan de lijst.
+
 ## 16/10/'24
 
 Vandaag heb ik ervoor gezorgd dat het uiterlijk van de standaard laravel pagina overal te zien is. Ook heb ik de create
 en detailpagia's gemaakt. Er is een functie om een LEGO set te verwijderen. Ik heb een Brands tabel gemaakt in de
-database en gekoppeld met de Legosets tabel zodat elke set aan een merk is gekoppeld. De Brands tabel bevat de volgende kolommen:
+database en gekoppeld met de Legosets tabel zodat elke set aan een merk is gekoppeld. De Brands tabel bevat de volgende
+kolommen:
+
 - id (primary key)
 - name (varchar)
 - created_at (timestamp)

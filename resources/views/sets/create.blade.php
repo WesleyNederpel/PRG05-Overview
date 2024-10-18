@@ -1,4 +1,4 @@
-<x-main pagename="Add LEGO set">
+<x-app-layout pagename="Add LEGO set">
     <form action="{{ route('sets.store') }}" method="post">
         @csrf
         <div>
@@ -19,4 +19,4 @@
         </div>
         <button type="submit">Add</button>
     </form>
-</x-main>
+</x-app-layout>
