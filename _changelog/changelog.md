@@ -3,7 +3,9 @@
 ## 18/10/'24
 
 Vandaag heb ik een Uploaded by Me pagina toegevoegd aan de site. Op deze pagina kan een ingelogde gebruiker bekijken
-welke LEGO sets zij hebben toegevoegd aan de lijst.
+welke LEGO sets zij hebben toegevoegd aan de lijst. Ook heb ik een Register knop toegevoegd aan de navigatiebalk wanneer
+iemand nog niet is ingelogd. Ook heb ik op de pagina LEGO sets een mogelijkheid tot filteren op automerk toegevoegd
+d.m.v. een form.
 
 ## 16/10/'24
 

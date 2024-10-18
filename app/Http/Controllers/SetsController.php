@@ -12,10 +12,18 @@ class SetsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()  //http://localhost:8000/legosets
+    public function index(Request $request)  //http://localhost:8000/legosets
     {
-        $sets = Legoset::all();
-        return view('sets.index', compact('sets'));
+        $query = Legoset::query();
+
+        if ($request->has('brand') && $request->brand != '') {
+            $query->where('brand_id', $request->brand);
+        }
+
+        $sets = $query->get();
+        $brands = Brand::all();
+
+        return view('sets.index', ['sets' => $sets, 'brands' => $brands]);
     }
 
     /**
