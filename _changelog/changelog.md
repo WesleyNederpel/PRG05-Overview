@@ -1,5 +1,11 @@
 # Changelog
 
+## 21/10/'24
+
+Vandaag heb ik gezorgd dat LEGO sets alleen worden getoond wanneer zij approved zijn door admins. Dit process voor
+approval moet nog gemaakt worden maar de functie dat de sets alleen getoond worden wanneer in de database de variabele
+op approved staat. Ook heb ik voor de create form required messages gemaakt.
+
 ## 18/10/'24
 
 Vandaag heb ik een Uploaded by Me pagina toegevoegd aan de site. Op deze pagina kan een ingelogde gebruiker bekijken

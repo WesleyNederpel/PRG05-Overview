@@ -20,6 +20,8 @@ class SetsController extends Controller
             $query->where('brand_id', $request->brand);
         }
 
+        $query->where('activity', 2);
+
         $sets = $query->get();
         $brands = Brand::all();
 
@@ -40,6 +42,16 @@ class SetsController extends Controller
      */
     public function store(Request $request) //http://localhost:8000/legosets <- IS POST
     {
+        $request->validate([
+            'name' => 'required',
+            'img_url' => 'required',
+            'brand_id' => 'required',
+        ], [
+            'name.required' => 'Please enter the name of the set',
+            'img_url.required' => 'Please enter the image URL of the set',
+            'brand_id.required' => 'Please select the brand of the set',
+        ]);
+
         $set = new Legoset();
         $set->name = $request->input('name');
         $set->img_url = $request->input('img_url');

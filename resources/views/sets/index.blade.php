@@ -29,6 +29,5 @@
                 </form>
             @endif
         @endauth
-
     @endforeach
 </x-app-layout>
