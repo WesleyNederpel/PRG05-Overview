@@ -1,5 +1,10 @@
 # Changelog
 
+## 23/10/'24
+
+Vandaag heb ik een edit functie toegevoegd. De knop hiervoor staat op de Show view en hier heb ik ook de Delete optie
+naartoe verplaatst.
+
 ## 21/10/'24
 
 Vandaag heb ik gezorgd dat LEGO sets alleen worden getoond wanneer zij approved zijn door admins. Dit process voor

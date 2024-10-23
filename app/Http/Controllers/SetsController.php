@@ -75,17 +75,34 @@ class SetsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Legoset $legoset) //http://localhost:8000/legosets/1/edit
+    public function edit(Legoset $set) //http://localhost:8000/legosets/1/edit
     {
-        //
+        $brands = Brand::all();
+        return view('sets.edit', compact('set', 'brands'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Legoset $legoset) //http://localhost:8000/legosets/1
+    public function update(Request $request, Legoset $set) //http://localhost:8000/legosets/1
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'img_url' => 'required',
+            'brand_id' => 'required',
+        ], [
+            'name.required' => 'Please enter the name of the set',
+            'img_url.required' => 'Please enter the image URL of the set',
+            'brand_id.required' => 'Please select the brand of the set',
+        ]);
+
+        $set->name = $request->name;
+        $set->img_url = $request->img_url;
+        $set->brand_id = $request->brand_id;
+
+        $set->update();
+
+        return redirect()->route('sets.show', $set->id);
     }
 
     /**
