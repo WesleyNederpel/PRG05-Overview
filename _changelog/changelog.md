@@ -1,5 +1,9 @@
 # Changelog
 
+## 25/10/'24
+
+Vandaag heb ik de zoekfunctie toegevoegd. Hiermee kunnen gebruikers zoeken naar LEGO sets op naam.
+
 ## 23/10/'24
 
 Vandaag heb ik een edit functie toegevoegd. De knop hiervoor staat op de Show view en hier heb ik ook de Delete optie

@@ -10,16 +10,23 @@
             <option value="">All Brands</option>
             @foreach($brands as $brand)
                 <option
-                    value="{{ $brand->id }}" {{ request('brand') == $brand->id ? 'selected' : '' }}>{{ $brand->name }}</option>
+                    value="{{ $brand->id }}" {{ request('brand') == $brand->id ? 'selected' : '' }}>{{ $brand->name }}
+                </option>
             @endforeach
         </select>
         <button type="submit">Filter</button>
     </form>
-    @foreach($sets as $set)
-        <h2>{{ $set->name }}</h2>
-
-        <a href="{{ route('sets.show', $set->id) }}">Details</a>
-        <img src="{{ asset($set->img_url) }}" alt="{{ $set->name }}">
-
-    @endforeach
+    <form action="{{ route('sets.search') }}" method="GET">
+        <input type="text" name="search" placeholder="Zoek naar een LEGO set">
+        <button type="submit">Zoek</button>
+    </form>
+    @if($sets->isEmpty())
+        <p>No LEGO sets found.</p>
+    @else
+        @foreach($sets as $set)
+            <h2>{{ $set->name }}</h2>
+            <a href="{{ route('sets.show', $set->id) }}">Details</a>
+            <img src="{{ asset($set->img_url) }}" alt="{{ $set->name }}">
+        @endforeach
+    @endif
 </x-app-layout>

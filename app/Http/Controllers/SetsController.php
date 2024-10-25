@@ -121,4 +121,12 @@ class SetsController extends Controller
         $sets = $user->legosets;
         return view('sets.uploaded', ['sets' => $sets]);
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        $results = Legoset::where('name', 'like', "%$search%")->get();
+
+        return view('sets.index', ['sets' => $results, 'brands' => Brand::all()]);
+    }
 }
