@@ -1,5 +1,10 @@
 # Changelog
 
+## 28/10/'24
+
+Vandaag heb ik een pagina aangemaakt die alleen showt wanneer een gebruiker een admin is. Op deze pagina kan de admin
+LEGO sets toggelen. Dit kan door op de knop 'Approve' of 'Disapprove' te klikken.
+
 ## 25/10/'24
 
 Vandaag heb ik de zoekfunctie toegevoegd. Hiermee kunnen gebruikers zoeken naar LEGO sets op naam.

@@ -22,9 +22,9 @@
                     <x-nav-link :href="route('sets')" :active="request()->routeIs('sets')">
                         {{ __('LEGO sets') }}
                     </x-nav-link>
-                    @if (Auth::check() && Auth::user()->isAdmin === 1)
-                        <x-nav-link :href="route('sets')" :active="request()->routeIs('sets')">
-                            {{ __('LEGO sets') }}
+                    @if(Auth::check() && Auth::user()->isAdmin == '1')
+                        <x-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
+                            {{ __('Admin') }}
                         </x-nav-link>
                     @endif
                 </div>
