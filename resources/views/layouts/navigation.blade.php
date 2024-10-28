@@ -22,6 +22,11 @@
                     <x-nav-link :href="route('sets')" :active="request()->routeIs('sets')">
                         {{ __('LEGO sets') }}
                     </x-nav-link>
+                    @if (Auth::check() && Auth::user()->isAdmin === 1)
+                        <x-nav-link :href="route('sets')" :active="request()->routeIs('sets')">
+                            {{ __('LEGO sets') }}
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -103,10 +108,10 @@
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
             @auth
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email}}</div>
-            </div>
+                <div class="px-4">
+                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email}}</div>
+                </div>
             @endauth
 
             <div class="mt-3 space-y-1">
