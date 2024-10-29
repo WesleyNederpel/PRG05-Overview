@@ -1,7 +1,11 @@
 <x-app-layout pagename="LEGO sets">
     <h1>LEGO sets</h1>
     @auth
-        <a href="{{ route('sets.create') }}">Add LEGO set</a>
+        @if (Auth::user()->hasEnoughLogins())
+            <a href="{{ route('sets.create') }}">Add LEGO set</a>
+        @else
+            <p>You need to have logged in at least 5 times to add a LEGO set.</p>
+        @endif
     @endauth
 
     <form method="GET" action="{{ route('sets') }}">

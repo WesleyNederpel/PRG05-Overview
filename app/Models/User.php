@@ -45,4 +45,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function logins()
+    {
+        return $this->hasMany(Login::class);
+    }
+
+    public function hasEnoughLogins()
+    {
+        return $this->logins()->count() >= 5;
+    }
 }

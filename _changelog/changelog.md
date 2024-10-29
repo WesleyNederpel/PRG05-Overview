@@ -1,5 +1,10 @@
 # Changelog
 
+## 29/10/'24
+
+Vandaag heb ik ervoor gezorgd dat een gebruiker alleen maar een LEGO set kan toevoegen aan de pagina als hij/zij
+minimaal 5 keer heeft ingelogd met zijn/haar account.
+
 ## 28/10/'24
 
 Vandaag heb ik een pagina aangemaakt die alleen showt wanneer een gebruiker een admin is. Op deze pagina kan de admin
