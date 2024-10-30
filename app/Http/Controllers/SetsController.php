@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Legoset;
 use App\Models\Brand;
+use App\Models\User;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class SetsController extends Controller
 {
@@ -83,6 +85,7 @@ class SetsController extends Controller
     {
         $brands = Brand::all();
         return view('sets.edit', compact('set', 'brands'));
+
     }
 
     /**
@@ -112,7 +115,7 @@ class SetsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id) //http://localhost:8000/legosets/1
+    public function destroy($id, Legoset $set) //http://localhost:8000/legosets/1
     {
         $sets = Legoset::find($id);
         $sets->delete();
@@ -121,9 +124,10 @@ class SetsController extends Controller
 
     public function uploaded()
     {
-        $user = Auth::user();
-        $sets = $user->legosets;
-        return view('sets.uploaded', ['sets' => $sets]);
+//        $user = Auth::user();
+//        $sets = $user->legosets;
+        $sets = Auth::user()->legosets;
+        return view('sets.uploaded', compact('sets'));
     }
 
     public function search(Request $request)

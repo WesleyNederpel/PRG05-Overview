@@ -19,14 +19,14 @@
                     <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
                         {{ __('About Us') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('sets')" :active="request()->routeIs('sets')">
+                    <x-nav-link :href="route('sets.index')" :active="request()->routeIs('sets.index')">
                         {{ __('LEGO sets') }}
                     </x-nav-link>
-                    @if(Auth::check() && Auth::user()->isAdmin == '1')
+                    @can('is-admin')
                         <x-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
                             {{ __('Admin') }}
                         </x-nav-link>
-                    @endif
+                    @endcan
                 </div>
             </div>
 
@@ -54,7 +54,7 @@
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('uploaded')">
+                            <x-dropdown-link :href="route('sets.uploaded')">
                                 {{ __('Uploaded sets') }}
                             </x-dropdown-link>
 

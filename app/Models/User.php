@@ -55,4 +55,9 @@ class User extends Authenticatable
     {
         return $this->logins()->count() >= 5;
     }
+
+    public function legosets()
+    {
+        return $this->hasMany(Legoset::class);
+    }
 }

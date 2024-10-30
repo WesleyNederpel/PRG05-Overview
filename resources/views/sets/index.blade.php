@@ -8,7 +8,7 @@
         @endif
     @endauth
 
-    <form method="GET" action="{{ route('sets') }}">
+    <form method="GET" action="{{ route('sets.index') }}">
         <label for="brand">Filter by Brand:</label>
         <select name="brand" id="brand">
             <option value="">All Brands</option>

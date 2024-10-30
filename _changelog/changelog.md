@@ -1,5 +1,10 @@
 # Changelog
 
+## 30/10/'24
+
+Vandaag heb ik Gates toegevoegd zodat alleen bevoegde gebruikers op bepaalde pagina's kunnen komen en er niet
+gedeeplinked kan worden. Als een gebruiker probeert te deeplinken krijgt deze een 403 error.
+
 ## 29/10/'24
 
 Vandaag heb ik ervoor gezorgd dat een gebruiker alleen maar een LEGO set kan toevoegen aan de pagina als hij/zij
