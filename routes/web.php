@@ -53,17 +53,17 @@ Route::get('/sets/create', [SetsController::class, 'create'])
 Route::post('/sets', [SetsController::class, 'store'])
     ->name('sets.store')
     ->middleware('auth');
-Route::get('/sets/{id}', [SetsController::class, 'show'])
+Route::get('/sets/{set}', [SetsController::class, 'show'])
     ->name('sets.show');
-Route::get('/sets/{id}/edit', [SetsController::class, 'edit'])
+Route::get('/sets/{set}/edit', [SetsController::class, 'edit'])
     ->name('sets.edit')
     ->middleware('auth')
     ->can('edit-set,set');
-Route::patch('/sets/{id}', [SetsController::class, 'update'])
+Route::patch('/sets/{set}', [SetsController::class, 'update'])
     ->name('sets.update')
     ->middleware('auth')
     ->can('edit-set,set');
-Route::delete('/sets/{id}', [SetsController::class, 'destroy'])
+Route::delete('/sets/{set}', [SetsController::class, 'destroy'])
     ->name('sets.destroy')
     ->middleware('auth')
     ->can('edit-set,set');

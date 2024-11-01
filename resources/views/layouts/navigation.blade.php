@@ -28,7 +28,18 @@
                         </x-nav-link>
                     @endcan
                 </div>
+
             </div>
+            @guest
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('login')">
+                        Log In
+                    </x-nav-link>
+                    <x-nav-link :href="route('register')">
+                        Register
+                    </x-nav-link>
+                </div>
+            @endguest
 
             <!-- Settings Dropdown -->
             @auth
@@ -72,14 +83,7 @@
                     </x-dropdown>
                 </div>
             @endauth
-            @guest
-                <x-nav-link :href="route('login')">
-                    Log In
-                </x-nav-link>
-                <x-nav-link :href="route('register')">
-                    Register
-                </x-nav-link>
-            @endguest
+
 
             <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">

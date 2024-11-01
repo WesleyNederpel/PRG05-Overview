@@ -1,5 +1,10 @@
 # Changelog
 
+## 01/11/'24
+
+Vandaag heb ik de laatste errors en foutjes aangepast en gefixt. Alles werkt nu naar behoren. Ook heb ik overal de CSS
+aan toegevoegd zodat de website er nu netjes uitziet.
+
 ## 30/10/'24
 
 Vandaag heb ik Gates toegevoegd zodat alleen bevoegde gebruikers op bepaalde pagina's kunnen komen en er niet

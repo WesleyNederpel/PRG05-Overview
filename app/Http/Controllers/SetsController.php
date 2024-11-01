@@ -66,7 +66,7 @@ class SetsController extends Controller
         $set->activity = 1;
 
         $set->save();
-        return redirect()->route('sets');
+        return redirect()->route('sets.index');
     }
 
     /**
@@ -115,11 +115,10 @@ class SetsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id, Legoset $set) //http://localhost:8000/legosets/1
+    public function destroy(Legoset $set) //http://localhost:8000/legosets/1
     {
-        $sets = Legoset::find($id);
-        $sets->delete();
-        return redirect()->route('sets');
+        $set->delete();
+        return redirect()->route('sets.index');
     }
 
     public function uploaded()
