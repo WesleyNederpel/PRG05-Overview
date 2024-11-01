@@ -66,7 +66,7 @@
                                 {{ __('Profile') }}
                             </x-dropdown-link>
                             <x-dropdown-link :href="route('sets.uploaded')">
-                                {{ __('Uploaded sets') }}
+                                {{ __('Uploaded by You') }}
                             </x-dropdown-link>
 
                             <!-- Authentication -->
