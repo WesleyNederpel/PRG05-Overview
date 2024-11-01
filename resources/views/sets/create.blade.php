@@ -28,7 +28,7 @@
                             <x-input-label for="brand">Brand</x-input-label>
                             <select name="brand_id" id="brand_id"
                                     class="mt-1 block border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                                <option value="standaard" disabled selected>Kies een merk</option>
+                                <option value="standaard" disabled selected>Choose a brand</option>
                                 @foreach($brands as $brand)
                                     <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                                 @endforeach

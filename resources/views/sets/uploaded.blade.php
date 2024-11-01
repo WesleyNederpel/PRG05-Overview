@@ -16,7 +16,7 @@
                             @endforeach
                         </ul>
                     @else
-                        <p>You have not uploaded any sets yet.</p>
+                        <span class="text-sm text-red-600 dark:text-red-400">You have not uploaded any sets yet.</span>
                     @endif
                 </div>
             </div>

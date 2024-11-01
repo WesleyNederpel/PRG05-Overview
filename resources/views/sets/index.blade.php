@@ -31,12 +31,12 @@
                         <x-primary-button type="submit">Filter</x-primary-button>
                     </form>
                     <form action="{{ route('sets.search') }}" method="GET" class="mt-6 space-y-6">
-                        <x-text-input type="text" name="search" placeholder="Zoek naar een LEGO set"></x-text-input>
-                        <x-primary-button type="submit">Zoek</x-primary-button>
+                        <x-text-input type="text" name="search" placeholder="Search a set"></x-text-input>
+                        <x-primary-button type="submit">Search</x-primary-button>
                     </form>
 
                     @if($sets->isEmpty())
-                        <p>No LEGO sets found.</p>
+                        <span class="text-sm text-red-600 dark:text-red-400">No LEGO Sets found</span>
                     @else
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             @foreach($sets as $set)
