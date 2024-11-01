@@ -3,7 +3,8 @@
 ## 01/11/'24
 
 Vandaag heb ik de laatste errors en foutjes aangepast en gefixt. Alles werkt nu naar behoren. Ook heb ik overal de CSS
-aan toegevoegd zodat de website er nu netjes uitziet.
+aan toegevoegd zodat de website er nu netjes uitziet. Ook heb ik op de Home en About Us pagina's een stukje tekst gezet
+en op alleen de Home pagina een stukje waar de laatst toegevoegde LEGO set te zien is.
 
 ## 30/10/'24
 

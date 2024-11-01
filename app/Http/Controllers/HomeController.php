@@ -11,6 +11,7 @@ class HomeController extends Controller
     {
         $latestSet = Legoset::where('activity', 2)
             ->latest()
+            ->with('user')
             ->first();
 
         return view('home', compact('latestSet'));
