@@ -36,7 +36,7 @@ class SetsController extends Controller
     public function create() //http://localhost:8000/legosets/create  <- IS GET
     {
         if (!Auth::user()->hasEnoughLogins()) {
-            return redirect()->route('sets')->with('error', 'You need to login at least 5 times before you can add LEGO sets.');
+            return redirect()->route('sets.index')->with('error', 'You need to login at least 5 times before you can add LEGO sets.');
         }
 
         $brands = Brand::all();

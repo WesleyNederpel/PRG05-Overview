@@ -13,7 +13,7 @@
                             <x-secondary-button class="mt-6"><a href="{{ route('sets.create') }}">Add LEGO set</a>
                             </x-secondary-button>
                         @else
-                            <p>You need to have logged in at least 5 times to add a LEGO set.</p>
+                            <span class="text-sm text-red-600 dark:text-red-400">You need to have logged in at least 5 times to add a LEGO set.</span>
                         @endif
                     @endauth
 
